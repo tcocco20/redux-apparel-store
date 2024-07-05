@@ -1,10 +1,19 @@
-import { Button } from "@nextui-org/react";
+import Header from "./components/Header.tsx";
+import Shop from "./components/Shop.tsx";
+import Product from "./components/Product.tsx";
+import { DUMMY_PRODUCTS } from "./dummy-products.ts";
 
 function App() {
   return (
     <>
-      <h1 className="text-2xl">React TypeScript App</h1>
-      <Button>Click me</Button>
+      <Header />
+      <Shop>
+        {DUMMY_PRODUCTS.map((product) => (
+          <li key={product.id}>
+            <Product {...product} />
+          </li>
+        ))}
+      </Shop>
     </>
   );
 }
