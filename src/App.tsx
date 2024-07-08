@@ -6,7 +6,7 @@ import { DUMMY_PRODUCTS } from "./dummy-products.ts";
 function App() {
   return (
     <main className="bg-yellow-950 py-12">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-40">
         <Header />
         <Shop>
           {DUMMY_PRODUCTS.map((product) => (
