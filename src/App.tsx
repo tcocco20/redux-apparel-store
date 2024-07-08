@@ -5,16 +5,18 @@ import { DUMMY_PRODUCTS } from "./dummy-products.ts";
 
 function App() {
   return (
-    <>
-      <Header />
-      <Shop>
-        {DUMMY_PRODUCTS.map((product) => (
-          <li key={product.id}>
-            <Product {...product} />
-          </li>
-        ))}
-      </Shop>
-    </>
+    <main className="bg-yellow-950 py-12">
+      <div className="container mx-auto">
+        <Header />
+        <Shop>
+          {DUMMY_PRODUCTS.map((product) => (
+            <li key={product.id}>
+              <Product {...product} />
+            </li>
+          ))}
+        </Shop>
+      </div>
+    </main>
   );
 }
 
