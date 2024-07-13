@@ -1,4 +1,4 @@
-import { type ReactNode } from 'react';
+import { type ReactNode } from "react";
 
 type ShopProps = {
   children: ReactNode;
@@ -6,8 +6,10 @@ type ShopProps = {
 
 export default function Shop({ children }: ShopProps) {
   return (
-    <section id="shop">
-      <h2>Elegant Clothing For Everyone</h2>
+    <section className="my-8">
+      <h2 className="text-2xl font-serif text-neutral-300 uppercase font-medium opacity-70 my-5">
+        Elegant Clothing For Everyone
+      </h2>
 
       <ul id="products">{children}</ul>
     </section>

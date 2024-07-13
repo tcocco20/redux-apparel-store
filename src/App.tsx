@@ -5,7 +5,7 @@ import { DUMMY_PRODUCTS } from "./dummy-products.ts";
 
 function App() {
   return (
-    <main className="bg-yellow-950 py-12">
+    <main className="bg-yellow-950">
       <div className="container mx-auto px-40">
         <Header />
         <Shop>
