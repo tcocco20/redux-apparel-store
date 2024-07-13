@@ -11,7 +11,7 @@ export default function Shop({ children }: ShopProps) {
         Elegant Clothing For Everyone
       </h2>
 
-      <ul id="products">{children}</ul>
+      <ul className="flex flex-wrap gap-8">{children}</ul>
     </section>
   );
 }

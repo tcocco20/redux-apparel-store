@@ -1,3 +1,5 @@
+import { Image } from "@nextui-org/react";
+
 type ProductProps = {
   id: string;
   image: string;
@@ -15,9 +17,9 @@ export default function Product({
   function handleAddToCart() {}
 
   return (
-    <article className="product">
-      <img src={image} alt={title} />
-      <div className="product-content">
+    <article>
+      <Image src={image} alt={title} />
+      <div>
         <div>
           <h3>{title}</h3>
           <p className="product-price">${price}</p>

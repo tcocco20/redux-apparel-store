@@ -10,7 +10,7 @@ function App() {
         <Header />
         <Shop>
           {DUMMY_PRODUCTS.map((product) => (
-            <li key={product.id}>
+            <li className="w-[calc(33%-18px)]" key={product.id}>
               <Product {...product} />
             </li>
           ))}
