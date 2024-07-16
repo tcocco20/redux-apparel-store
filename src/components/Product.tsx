@@ -18,16 +18,16 @@ export default function Product({
 
   return (
     <article>
-      <Image src={image} alt={title} />
-      <div>
-        <div>
-          <h3>{title}</h3>
-          <p className="product-price">${price}</p>
-          <p>{description}</p>
-        </div>
-        <p className="product-actions">
-          <button onClick={handleAddToCart}>Add to Cart</button>
+      <Image src={image} alt={title} radius="sm" />
+      <div className="p-4">
+        <h3 className="text-amber-300/80 text-xl/none font-semibold font-serif">
+          {title}
+        </h3>
+        <p className="font-serif text-lg text-amber-200/60">${price}</p>
+        <p className="text-amber-50/70 text-medium/none font-serif">
+          {description}
         </p>
+        <button onClick={handleAddToCart}>Add to Cart</button>
       </div>
     </article>
   );
