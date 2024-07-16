@@ -11,7 +11,7 @@ function App() {
         <Shop>
           {DUMMY_PRODUCTS.map((product) => (
             <li
-              className="w-[calc(33%-18px)] bg-stone-500/50 rounded-lg shadow-2xl"
+              className="w-[calc(33%-18px)] bg-stone-500/50 rounded-lg shadow-2xl max-h-[672px]"
               key={product.id}
             >
               <Product {...product} />
