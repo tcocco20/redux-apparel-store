@@ -2,9 +2,13 @@ import { useState } from "react";
 
 import Cart from "./Cart.tsx";
 import { Button, Image } from "@nextui-org/react";
+import { useCartSelector } from "../store/hooks.ts";
 
 export default function Header() {
   const [cartIsVisible, setCartIsVisible] = useState(false);
+  const numCartItems = useCartSelector((state) =>
+    state.cart.items.reduce((val, item) => val + item.quantity, 0)
+  );
 
   function handleOpenCartClick() {
     setCartIsVisible(true);
@@ -30,7 +34,7 @@ export default function Header() {
           radius="sm"
           onClick={handleOpenCartClick}
         >
-          Cart (0)
+          Cart ({numCartItems})
         </Button>
       </header>
     </>
